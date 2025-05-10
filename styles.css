@@ -8,8 +8,13 @@ body {
 }
 
 p {
-  font-family: "Source Code Pro", monospace;
   line-height: 1.4;
+}
+
+.footer-text {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+  margin-top: 6px;
 }
 
 main {
@@ -25,5 +30,9 @@ main {
   .signature {
     padding: 16px;
     row-gap: 8px;
+  }
+
+  .footer-text {
+    font-size: 10px;
   }
 }
