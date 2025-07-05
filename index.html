@@ -44,17 +44,25 @@
   <!-- Content -->
   <body>
     <main>
-      <img
-        src="/images/small_header.png"
-        alt="Eyezayuh logo"
-        style="width: 335px; height: 91px; padding: 24px 0px 0px 24px"
-      />
-      <p style="font-size: 12px; padding: 0px 0px 0px 24px; width: 600px">
-        i’m isaiah trotter and this is just a collection of all the sketchbooks i’ve made. the
-        intention is to keep this going for as long as i live with the hopes of amassing as many
-        sketchbooks as possible. i think having a big body of work is impressive, and i want to die
-        knowing that i created something cool.
-      </p>
+      <div class="header">
+        <picture>
+          <source srcset="images/Header.png" media="(max-width: 800px)" />
+          <img
+            src="images/small_header.png"
+            alt="Eyezayuh logo"
+            id="header-img"
+            style="width: 335px; height: 91px"
+          />
+        </picture>
+        <div>
+          <p class="synopsis">
+            i’m isaiah trotter and this is just a collection of all the sketchbooks i’ve made. the
+            intention is to keep this going for as long as i live with the hopes of amassing as many
+            sketchbooks as possible. i think having a big body of work is impressive, and i want to
+            die knowing that i created something cool.
+          </p>
+        </div>
+      </div>
 
       <div class="sketchbooks">
         <div>

@@ -13,6 +13,15 @@ p {
   font-family: "Source Code Pro", monospace;
 }
 
+.header {
+  padding: 24px;
+}
+
+.synopsis {
+  font-size: 12px;
+  width: 600px;
+}
+
 .footer-text {
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
@@ -94,5 +103,23 @@ main {
 
   .footer-text {
     font-size: 10px;
+  }
+
+  .sketchbooks {
+    margin-left: 0px;
+  }
+
+  .header {
+    padding: 0px;
+  }
+
+  #header-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .synopsis {
+    width: auto;
+    padding: 0px 16px 0px 16px;
   }
 }
