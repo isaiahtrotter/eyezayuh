@@ -5,16 +5,76 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 p {
   line-height: 1.4;
+  font-family: "Source Code Pro", monospace;
 }
 
 .footer-text {
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
   margin-top: 6px;
+}
+
+.sketchbooks {
+  width: 100vw;
+  min-height: 500px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
+  scrollbar-width: none;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+}
+
+.sketchbook_text {
+  margin: 0px 0px 0px 14px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.sketchbooks::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Chrome, Safari */
+}
+
+.df-popup-thumb,
+.df-book-cover::after {
+  background: none !important;
+  flex: 0 0 auto;
+}
+
+.df-book-wrapper,
+.df-book-page1,
+.df-book-page2,
+.df-book-cover {
+  border-radius: 12px;
+}
+
+#issue_1,
+#issue_2,
+.df-popup-thumb,
+.df-book-cover::after {
+  width: 250px;
+}
+
+#issue_3,
+#issue_5,
+#issue_7,
+.df-popup-thumb,
+.df-book-cover::after {
+  width: 175px;
+}
+
+#issue_4,
+#issue_6,
+.df-popup-thumb,
+.df-book-cover::after {
+  width: 250px;
 }
 
 main {
