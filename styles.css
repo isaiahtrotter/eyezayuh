@@ -17,6 +17,11 @@ p {
   padding: 24px;
 }
 
+#header-img {
+  width: 335px;
+  height: auto;
+}
+
 .synopsis {
   font-size: 12px;
   width: 600px;
@@ -121,5 +126,6 @@ main {
   .synopsis {
     width: auto;
     padding: 0px 16px 0px 16px;
+    font-size: 12px;
   }
 }
