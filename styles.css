@@ -114,11 +114,18 @@ main {
     margin-left: 0px;
   }
 
-  .synopsis {
-    width: 100%;
+  .header {
+    padding: 0px;
   }
 
-  .header {
-    padding: 16px;
+  #header-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .synopsis {
+    width: auto;
+    padding: 0px 16px 0px 16px;
+    font-size: 12px;
   }
 }
