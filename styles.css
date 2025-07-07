@@ -62,12 +62,24 @@ p {
   flex: 0 0 auto;
 }
 
+/* Prevents the slow fade in of flipbook covers */
+
+.df-thumb img,
+.df-book-cover img,
+.df-page img {
+  transition: none !important;
+}
+
+/* Puts a border radius on every page so that none of the below pages stick out */
+
 .df-book-wrapper,
 .df-book-page1,
 .df-book-page2,
 .df-book-cover {
   border-radius: 12px;
 }
+
+/* 3.5" x 5.5" */
 
 #issue_1,
 #issue_2,
@@ -76,6 +88,8 @@ p {
   width: 250px;
 }
 
+/* 5.5" x 3.5" for vertical layout instead of horizontal */
+
 #issue_3,
 #issue_5,
 #issue_7,
@@ -83,6 +97,8 @@ p {
 .df-book-cover::after {
   width: 175px;
 }
+
+/* ~5.5" x 8" */
 
 #issue_4,
 #issue_6,
