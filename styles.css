@@ -67,7 +67,11 @@ p {
 .df-thumb img,
 .df-book-cover img,
 .df-page img {
+  animation: none !important;
   transition: none !important;
+  transform: none !important;
+  scale: 1 !important;
+  opacity: 1 !important;
 }
 
 /* Puts a border radius on every page so that none of the below pages stick out */
