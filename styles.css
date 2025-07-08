@@ -80,7 +80,7 @@ p {
 .df-book-page1,
 .df-book-page2,
 .df-book-cover {
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 /* 3.5" x 5.5" */
@@ -97,6 +97,7 @@ p {
 #issue_3,
 #issue_5,
 #issue_7,
+#issue_8,
 .df-popup-thumb,
 .df-book-cover::after {
   width: 175px;
