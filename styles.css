@@ -116,6 +116,12 @@ p {
   width: 250px;
 }
 
+#issue_9,
+.df-popup-thumb,
+.df-book-cover::after {
+  width: 425px;
+}
+
 main {
   flex: 1;
 }
