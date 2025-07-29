@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: black;
+}
+
 p {
   line-height: 1.4;
   font-family: "Source Code Pro", monospace;
