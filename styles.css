@@ -111,15 +111,10 @@ p {
 
 #issue_4,
 #issue_6,
-.df-popup-thumb,
-.df-book-cover::after {
-  width: 250px;
-}
-
 #issue_9,
 .df-popup-thumb,
 .df-book-cover::after {
-  width: 425px;
+  width: 250px;
 }
 
 main {
