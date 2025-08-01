@@ -51,10 +51,34 @@ p {
   margin-left: 10px;
 }
 
-.sketchbook_text {
+.sketchbook-text {
   margin: 0px 0px 0px 14px;
   font-size: 11px !important;
   line-height: 1.7;
+}
+
+.sketchbook-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.audio-toggle {
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity 0.2s ease;
+  user-select: none;
+  margin: 0px 8px 0px 0px;
+  padding: 0 8px 16px 16px; /* Larger padding so the test is easier to click */
+}
+
+.audio-toggle.active {
+  opacity: 0.8;
+}
+
+.audio-toggle:hover {
+  opacity: 1;
 }
 
 .sketchbooks::-webkit-scrollbar {
