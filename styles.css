@@ -113,37 +113,13 @@ p {
   border-radius: 15px;
 }
 
-/* 3.5" x 5.5" */
-
-#issue_1,
-#issue_2,
-#issue_10,
-.df-popup-thumb,
-.df-book-cover::after {
-  width: 250px;
-}
-
-/* 5.5" x 3.5" for vertical layout instead of horizontal */
-
-#issue_3,
-#issue_5,
-#issue_7,
-#issue_8,
-.df-popup-thumb,
-.df-book-cover::after {
-  width: 175px;
-}
-
-/* ~5.5" x 8" */
-
-#issue_4,
-#issue_6,
-#issue_9,
-#issue_11,
-.df-popup-thumb,
-.df-book-cover::after {
-  width: 250px;
-}
+/* Stops dearflip from opening the cover on hover
+._df_thumb,
+._df_thumb * {
+  transform: none !important;
+  transition: none !important;
+} 
+*/
 
 main {
   flex: 1;
