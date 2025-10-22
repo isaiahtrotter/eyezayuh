@@ -68,8 +68,44 @@
       // ==== SKETCHBOOK DATA ====
       const sketchbooks = [
         {
+          issue: 15,
+          date: "10/7/25 - 10/?/25",
+          width: 5.75,
+          height: 8.25,
+          spreads: 71,
+          thumb: "thumbnails/issue_15.jpeg",
+          source: "sketchbooks/issue_7.pdf",
+        },
+        {
+          issue: 14,
+          date: "9/15/25 - 10/5/25",
+          width: 5.5,
+          height: 8.375,
+          spreads: 82,
+          thumb: "thumbnails/issue_14.jpeg",
+          source: "sketchbooks/issue_7.pdf",
+        },
+        {
+          issue: 13,
+          date: "9/4/25 - 9/13/25",
+          width: 5.5,
+          height: 8,
+          spreads: 33,
+          thumb: "thumbnails/issue_13.jpeg",
+          source: "sketchbooks/issue_7.pdf",
+        },
+        {
+          issue: 12,
+          date: "8/12/25 - 9/1/25",
+          width: 5.5,
+          height: 3.5,
+          spreads: 12,
+          thumb: "thumbnails/issue_12.jpeg",
+          source: "sketchbooks/issue_7.pdf",
+        },
+        {
           issue: 11,
-          date: "8/7/25 - ?/?/25",
+          date: "8/7/25 - 8/28/25",
           width: 5.125,
           height: 8.375,
           spreads: 106,
@@ -247,6 +283,29 @@
           currentAudio = null;
           currentToggle = null;
         };
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const footer = document.querySelector(".signature");
+
+        // Calculate stats dynamically from your sketchbooks array
+        const totalSketchbooks = sketchbooks.length;
+        const totalSpreads = sketchbooks.reduce((sum, s) => sum + (s.spreads || 0), 0);
+        const average = (totalSpreads / totalSketchbooks).toFixed(1);
+
+        // Create the stats container
+        const stats = document.createElement("div");
+        stats.classList.add("footer-stats");
+
+        stats.innerHTML = `
+    <div>Total Sketchbooks: ${totalSketchbooks}</div>
+    <div>Total Spreads: ${totalSpreads}</div>
+    <div>Average Spreads per Sketchbook: ${average}</div>
+  `;
+
+        footer.appendChild(stats);
       });
     </script>
   </body>

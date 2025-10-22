@@ -127,17 +127,31 @@ main {
 
 .signature {
   padding: 24px;
-  row-gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: #666;
+  font-family: sans-serif;
+}
+
+.signature .footer-stats {
+  flex-direction: column;
+  text-align: right;
+  row-gap: 24px;
+  font-size: 11px;
+  font-family: "Source Code Pro", monospace;
 }
 
 @media (max-width: 800px) {
   .signature {
     padding: 16px;
-    row-gap: 8px;
+    flex-direction: row;
   }
 
-  .footer-text {
-    font-size: 10px;
+  .signature .footer-stats {
+    flex-direction: column;
+    text-align: right;
+    gap: 4px;
   }
 
   .sketchbooks {
