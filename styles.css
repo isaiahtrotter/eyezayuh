@@ -139,6 +139,7 @@ main {
   text-align: right;
   row-gap: 24px;
   font-size: 11px;
+  line-height: 1.4em;
   font-family: "Source Code Pro", monospace;
 }
 
