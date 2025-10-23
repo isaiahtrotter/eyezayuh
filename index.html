@@ -5,20 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eyezayuh</title>
 
-    <!-- Icons / Fonts -->
+    <!-- Icons / Manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts (async load, preserves styling) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Main CSS (synchronous to preserve all layout and styling) -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Flipbook Styles -->
-    <link href="dflip/css/dflip.min.css" rel="stylesheet" />
-    <link href="dflip/css/themify-icons.min.css" rel="stylesheet" />
+    <!-- Flipbook / Icon CSS (async load to reduce render-blocking) -->
+    <link rel="stylesheet" href="dflip/css/dflip.min.css" media="print" onload="this.media='all'" />
+    <link
+      rel="stylesheet"
+      href="dflip/css/themify-icons.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="dflip/css/dflip.min.css" />
+      <link rel="stylesheet" href="dflip/css/themify-icons.min.css" />
+    </noscript>
   </head>
 
   <body>
@@ -73,7 +98,7 @@
           width: 5.75,
           height: 8.25,
           spreads: 71,
-          thumb: "thumbnails/issue_15.webp",
+          thumb: "thumbnails/issue_15.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -82,7 +107,7 @@
           width: 5.5,
           height: 8.375,
           spreads: 82,
-          thumb: "thumbnails/issue_14.webp",
+          thumb: "thumbnails/issue_14.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -91,7 +116,7 @@
           width: 5.5,
           height: 8,
           spreads: 33,
-          thumb: "thumbnails/issue_13.webp",
+          thumb: "thumbnails/issue_13.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -100,7 +125,7 @@
           width: 5.5,
           height: 3.5,
           spreads: 12,
-          thumb: "thumbnails/issue_12.webp",
+          thumb: "thumbnails/issue_12.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -109,7 +134,7 @@
           width: 5.125,
           height: 8.375,
           spreads: 106,
-          thumb: "thumbnails/issue_11.webp",
+          thumb: "thumbnails/issue_11.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -118,7 +143,7 @@
           width: 5.5,
           height: 3.5,
           spreads: 24,
-          thumb: "thumbnails/issue_10.webp",
+          thumb: "thumbnails/issue_10.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -127,7 +152,7 @@
           width: 5.125,
           height: 8.375,
           spreads: 35,
-          thumb: "thumbnails/issue_9.webp",
+          thumb: "thumbnails/issue_9.jpeg",
           source: "sketchbooks/issue_7.pdf",
         },
         {
@@ -136,7 +161,7 @@
           width: 3.5,
           height: 5.5,
           spreads: 46,
-          thumb: "thumbnails/issue_8.webp",
+          thumb: "thumbnails/issue_8.jpeg",
           source: "sketchbooks/issue_7.pdf",
           audio: "audio/issue8.m4a",
         },
@@ -146,7 +171,7 @@
           width: 3.5,
           height: 5.5,
           spreads: 32,
-          thumb: "thumbnails/issue_7.webp",
+          thumb: "thumbnails/issue_7.jpeg",
           source: "sketchbooks/issue_7.pdf",
           audio: "audio/issue7.m4a",
         },
@@ -156,7 +181,7 @@
           width: 5.5,
           height: 8,
           spreads: 33,
-          thumb: "thumbnails/issue_6.webp",
+          thumb: "thumbnails/issue_6.jpeg",
           source: "sketchbooks/Cancer-2024-Rev-April-2025.pdf",
           audio: "audio/issue6.m4a",
         },
@@ -166,7 +191,7 @@
           width: 3.5,
           height: 5.5,
           spreads: 30,
-          thumb: "thumbnails/issue_5.webp",
+          thumb: "thumbnails/issue_5.jpeg",
           source: "sketchbooks/Cancer-2024-Rev-April-2025.pdf",
           audio: "audio/issue5.m4a",
         },
@@ -176,7 +201,7 @@
           width: 5.125,
           height: 8.25,
           spreads: 48,
-          thumb: "thumbnails/issue_4.webp",
+          thumb: "thumbnails/issue_4.jpeg",
           source: "sketchbooks/Cancer-2024-Rev-April-2025.pdf",
           audio: "audio/issue4.m4a",
         },
@@ -186,7 +211,7 @@
           width: 3.5,
           height: 5.5,
           spreads: 36,
-          thumb: "thumbnails/issue_3.webp",
+          thumb: "thumbnails/issue_3.jpeg",
           source: "sketchbooks/Cancer-2024-Rev-April-2025.pdf",
           audio: "audio/issue3.m4a",
         },
@@ -196,7 +221,7 @@
           width: 5.5,
           height: 3.5,
           spreads: 36,
-          thumb: "thumbnails/issue_2.webp",
+          thumb: "thumbnails/issue_2.jpeg",
           source: "sketchbooks/Cancer-2024-Rev-April-2025.pdf",
           audio: "audio/issue2.m4a",
         },
@@ -206,7 +231,7 @@
           width: 5.5,
           height: 3.5,
           spreads: 36,
-          thumb: "thumbnails/issue_1.webp",
+          thumb: "thumbnails/issue_1.jpeg",
           source: "sketchbooks/issue_1.pdf",
           audio: "audio/issue1.m4a",
         },
