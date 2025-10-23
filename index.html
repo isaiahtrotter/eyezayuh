@@ -84,6 +84,7 @@
     <!-- Flipbook Scripts -->
     <script src="dflip/js/libs/jquery.min.js"></script>
     <script src="dflip/js/dflip.min.js"></script>
+
     <script>
       jQuery(() => {
         DFLIP.defaults.backgroundColor = "#EEEEEE";
@@ -96,7 +97,7 @@
       const sketchbooks = [
         {
           issue: 15,
-          date: "10/7/25 - 10/?/25",
+          date: "10/7/25 - 10/25/25",
           width: 5.75,
           height: 8.25,
           spreads: 71,
@@ -320,17 +321,34 @@
         // Calculate stats dynamically from your sketchbooks array
         const totalSketchbooks = sketchbooks.length;
         const totalSpreads = sketchbooks.reduce((sum, s) => sum + (s.spreads || 0), 0);
-        const average = (totalSpreads / totalSketchbooks).toFixed(1);
+        const averageSpreads = (totalSpreads / totalSketchbooks).toFixed(1);
+
+        // Helper function to calculate days between two dates (MM/DD/YY - MM/DD/YY)
+        function daysBetween(dateRange) {
+          const [startStr, endStr] = dateRange.split(" - ");
+          const [startMonth, startDay, startYear] = startStr.split("/").map(Number);
+          const [endMonth, endDay, endYear] = endStr.split("/").map(Number);
+
+          const startDate = new Date(2000 + startYear, startMonth - 1, startDay);
+          const endDate = new Date(2000 + endYear, endMonth - 1, endDay);
+
+          return (endDate - startDate) / (1000 * 60 * 60 * 24) + 1;
+        }
+
+        // Calculate total and average days across all sketchbooks
+        const totalDays = sketchbooks.reduce((sum, s) => sum + daysBetween(s.date), 0);
+        const averageDays = (totalDays / totalSketchbooks).toFixed(1);
 
         // Create the stats container
         const stats = document.createElement("div");
         stats.classList.add("footer-stats");
 
         stats.innerHTML = `
-    <div>issues: ${totalSketchbooks}</div>
-    <div>spreads: ${totalSpreads}</div>
-    <div>avg. spreads/issue: ${average}</div>
-  `;
+      <div>issues: ${totalSketchbooks}</div>
+      <div>spreads: ${totalSpreads}</div>
+      <div>avg. spreads/issue: ${averageSpreads}</div>
+      <div>avg. days/issue: ${averageDays}</div>
+    `;
 
         footer.appendChild(stats);
       });
