@@ -171,6 +171,7 @@ main {
 
   .synopsis {
     width: auto;
+    min-height: 130px;
     padding: 0px 16px 0px 16px;
     font-size: 12px;
   }
