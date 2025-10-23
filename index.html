@@ -279,33 +279,42 @@
       // ==== AUDIO TOGGLE LOGIC ====
       let currentAudio = null,
         currentToggle = null;
+
       document.addEventListener("click", (e) => {
         if (!e.target.classList.contains("audio-toggle")) return;
-        const el = e.target;
-        const audio = new Audio(el.dataset.audio);
 
-        if (currentAudio === audio) {
-          audio.pause();
-          el.textContent = "▶";
-          el.classList.remove("active");
-          currentAudio = null;
-          currentToggle = null;
+        const el = e.target;
+        const audioSrc = el.dataset.audio;
+
+        // If clicking the same button again, toggle play/pause
+        if (currentAudio && currentAudio.src.includes(audioSrc)) {
+          if (currentAudio.paused) {
+            currentAudio.play();
+            el.textContent = "⏸";
+            el.classList.add("active");
+          } else {
+            currentAudio.pause();
+            el.textContent = "▶";
+            el.classList.remove("active");
+          }
           return;
         }
 
+        // Stop previous audio if a different one is playing
         if (currentAudio) {
           currentAudio.pause();
           currentToggle.textContent = "▶";
           currentToggle.classList.remove("active");
         }
 
-        audio.play();
+        // Start new audio
+        currentAudio = new Audio(audioSrc);
+        currentAudio.play();
         el.textContent = "⏸";
         el.classList.add("active");
-        currentAudio = audio;
         currentToggle = el;
 
-        audio.onended = () => {
+        currentAudio.onended = () => {
           el.textContent = "▶";
           el.classList.remove("active");
           currentAudio = null;
